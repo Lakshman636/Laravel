@@ -23,13 +23,21 @@
                            </tr>
                        </thead>
                        <tbody>
+                        @foreach ($categories as $category )
+                            
+                        
                           <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>{{  $category->id }}</td>
+                            <td>{{  $category->name }}</td>
+                            <td>{{  $category->description }}</td>
+                            <td>{{  $category->status ==1 ? 'Visible':'Hidden'}}</td>
+                            <td>
+                                <a href="{{ route('category.edit',$category->id) }}" class="btn btn-success"> Edit </a>
+                                <a href="{{ route('category.show',$category->id) }}" class="btn btn-info">Show</a>
+                                {{-- <a href="{{ route('category.destroy') }}" class="btn btn-danger">Delete</a> --}}
+                            </td>
                           </tr>
+                          @endforeach
                        </tbody>
                     </table>
                 </div>

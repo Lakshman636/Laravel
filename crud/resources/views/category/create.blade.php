@@ -7,8 +7,8 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h4> Categories List
-                        <a href="{{ url('category/create') }}" class="btn btn-primary float-end">Add Category</a>
+                    <h4> Create Category
+                        <a href="{{ url('category') }}" class="btn btn-danger float-end">Back</a>
                     </h4>
                 </div>
                 <div class="card-body">
