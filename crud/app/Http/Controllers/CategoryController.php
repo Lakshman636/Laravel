@@ -71,7 +71,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return view('category.edit');
+        return view('category.edit',compact('category'));
     }
 
     /**
@@ -83,7 +83,18 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+         $request->validate([
+            'name'=> 'required|string|max:255',
+            'description'=> 'required|string|max:255',
+            'status'=> 'nullable',
+
+        ]);
+        $category->update([
+            'name'=> $request->name,
+            'description'=> $request->description,
+            'status'=> $request->status == true ? 1:0,
+        ]);
+        return redirect('/category')->with('status','Category Updated Succesfully');
     }
 
     /**
