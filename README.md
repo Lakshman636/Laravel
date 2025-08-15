@@ -15,11 +15,6 @@ Perfect for learning Laravel basics or using as a starting point for your own pr
 
 ---
 
-## 🖼️ Preview
-![App Screenshot](./crud.png)
-
----
-
 ## 🛠️ Tech Stack
 | Technology | Description |
 |------------|-------------|
