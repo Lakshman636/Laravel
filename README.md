@@ -16,7 +16,7 @@ Perfect for learning Laravel basics or using as a starting point for your own pr
 ---
 
 ## 🖼️ Preview
-![App Screenshot](./screenshot.png)
+![App Screenshot](./crud.png)
 
 ---
 
